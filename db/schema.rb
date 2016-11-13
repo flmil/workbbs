@@ -28,13 +28,14 @@ ActiveRecord::Schema.define(version: 20161015052057) do
     t.string   "treatment"
     t.string   "ratio"
     t.string   "age"
+    t.string   "representations"
     t.string   "atmosphere"
     t.string   "message"
     t.string   "manner"
     t.string   "flow"
     t.string   "tel"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
 end

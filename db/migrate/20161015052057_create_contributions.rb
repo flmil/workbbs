@@ -15,6 +15,7 @@ class CreateContributions < ActiveRecord::Migration
 		  t.string :treatment
 		  t.string :ratio
 		  t.string :age
+		  t.string :representations
 		  t.string :atmosphere
 		  t.string :message
 		  t.string :manner

@@ -7,8 +7,8 @@
 
 	</head>
 	<body>
-		<form action="/renew/<%= content.id%>"method="post">
-
-		</form>
+		<% @content.order('id DESC').each do |content| %>
+			<p><%= content.name%></p>
+			<p><%= content.address%></p>
 	</body>
 </html>

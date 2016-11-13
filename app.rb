@@ -26,6 +26,7 @@ post '/new' do
 		treatment: params[:treatment],
 		ratio: params[:ratio],
 		age: params[:age],
+		representations: params[:representations],
 		atmosphere: params[:atmosphere],
 		message: params[:message],
 		manner: params[:manner],
@@ -36,45 +37,48 @@ post '/new' do
 	redirect '/'
 end
 
-post '/details' do
-	Contribution.find(paramus[:id])
+get '/details/:content_id' do
+	@content = Contribution.all
+#	@content = content.find_by(id: content_id)
+#	Contribution.find(paramus[:id])
 	erb :details
 end
 
-post '/renew/:id' do
-	@content = Contribution.find(params[:id])
-	@content.update({
-		name: params[:name],
-		address: params[:address],
-		traffic: params[:traffic],
-		money: params[:money],
-		shift: params[:shift],
-		explanation: params[:explanation],
-		feature: params[:feature],
-		condition: params[:condition],
-		period: params[:period],
-		count: params[:count],
-		fare: params[:fare],
-		treatment: params[:treatment],
-		ratio: params[:ratio],
-		age: params[:age],
-		attribute: params[:attribute],
-		atmosphere: params[:atmosphere],
-		message: params[:message],
-		manner: params[:manner],
-		flow: params[:flow],
-		tel: params[:tel],
-	})
 
-	redirect '/'
-end
+#post '/renew/:id' do
+#	@content = Contribution.find(params[:id])
+#	@content.update({
+#		name: params[:name],
+#		address: params[:address],
+#		traffic: params[:traffic],
+#		money: params[:money],
+#		shift: params[:shift],
+#		explanation: params[:explanation],
+#		feature: params[:feature],
+#		condition: params[:condition],
+#		period: params[:period],
+#		count: params[:count],
+#		fare: params[:fare],
+#		treatment: params[:treatment],
+#		ratio: params[:ratio],
+#		age: params[:age],
+#		attribute: params[:attribute],
+#		atmosphere: params[:atmosphere],
+#		message: params[:message],
+#		manner: params[:manner],
+#		flow: params[:flow],
+#		tel: params[:tel],
+#	})
+
+#	redirect '/'
+#end
 
 
 #get '/'do
 #	@names = name.all
 #end
 
-#get 'show/:name_id' do
+#get '/show/:name_id' do
 #	@name = name.find_by(id: name_id)
 #end
 
@@ -82,7 +86,6 @@ end
 #	@names = name.all
 #end
 
-#get 'show/:name_id' do
+#get '/show/:name_id' do
 #	@name = name.find_by(id: name_id)
 #end
-
