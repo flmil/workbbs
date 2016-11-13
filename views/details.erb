@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="ja">
-	<head>
-	<meta charset="UFT8">
+  <head>
+    <meta charset="UFT8">
 
-	<title>Detail</title>
+    <title>Detail</title>
 
-	</head>
-	<body>
-		<% @content.order('id DESC').each do |content| %>
-			<p><%= content.name%></p>
-			<p><%= content.address%></p>
-	</body>
+  </head>
+  <body>
+      <p><%= @content.name %></p>
+      <p><%= @content.address %></p>
+  </body>
 </html>
